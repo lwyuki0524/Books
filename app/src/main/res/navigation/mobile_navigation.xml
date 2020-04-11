@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_add">
+
+    <fragment
+        android:id="@+id/navigation_add"
+        android:label="@string/title_add"
+        android:name="com.example.books.ui.add.AddFragment">
+        <action
+            android:id="@+id/action_navigation_add_to_navigation_income"
+            app:destination="@+id/navigation_income" />
+        <action
+            android:id="@+id/action_navigation_add_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:label="@string/title_home"
+        android:name="com.example.books.ui.home.HomeFragment">
+        <action
+            android:id="@+id/action_navigation_home_self"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_book"
+        android:label="@string/title_book"
+        android:name="com.example.books.ui.book.BookFragment"/>
+
+    <fragment
+        android:id="@+id/navigation_income"
+        android:label="@string/title_add"
+        android:name="com.example.books.ui.add.IncomeFragment">
+        <action
+            android:id="@+id/action_navigation_income_to_navigation_add"
+            app:destination="@id/navigation_add" />
+        <action
+            android:id="@+id/action_navigation_income_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

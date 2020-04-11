@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="35dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/income"
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="60dp"
+                android:layout_marginRight="0dp"
+                android:background="@drawable/incomebutton"
+                android:onClick="go_income"
+                android:text="收入"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/expenses"
+                android:layout_width="85dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|left"
+                android:layout_marginLeft="-1dp"
+                android:background="@drawable/expensesbutton"
+                android:text="支出"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/complete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="0dp"
+                android:text="完成"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/big_title_border"
+            android:orientation="horizontal"
+            android:paddingLeft="20sp"
+            android:paddingTop="10sp"
+            android:paddingRight="20sp"
+            android:paddingBottom="10sp">
+
+            <ImageView
+                android:id="@+id/select_category"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                />
+
+            <TextView
+                android:id="@+id/select_category_name"
+                android:layout_width="78dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:gravity="center|left"
+                android:paddingLeft="15sp"
+                android:text="吃喝"
+                android:textColor="#000000"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="$ "
+                android:textColor="#000000"
+                android:textSize="30dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/input"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="center|right"
+                android:inputType="number"
+                android:paddingRight="15sp"
+                android:hint="0"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingBottom="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_diet"
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/eat"
+                        android:padding="30dp" />
+
+                    <Button
+                        android:id="@+id/btn_dress"
+                        android:layout_width="60dp"
+                        android:layout_height="60sp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/clothes"
+                        android:padding="30dp" />
+
+                    <Button
+                        android:id="@+id/btn_souvenir"
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
+                        android:layout_marginRight="30dp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/bag"
+                        android:padding="30dp" />
+
+                    <Button
+                        android:id="@+id/btn_online_shopping"
+                        android:layout_width="60sp"
+                        android:layout_height="60sp"
+                        android:layout_marginBottom="0dp"
+                        android:background="@drawable/shoppingcart"
+                        android:padding="30dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_diet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="吃喝"
+                        android:textColor="#000000"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_dress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="服飾"
+                        android:textColor="#000000"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_souvenir"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="40dp"
+                        android:text="手信"
+                        android:textColor="#000000"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_online_shopping"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="網購"
+                        android:textColor="#000000"
+                        android:textSize="25dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_airticket"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/airticket"
+                            android:padding="30dp" />
+
+                        <Button
+                            android:id="@+id/btn_entertainment"
+                            android:layout_width="60dp"
+                            android:layout_height="60sp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/entertainment"
+                            android:padding="30dp" />
+
+                        <Button
+                            android:id="@+id/btn_telephone_bill"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/callphone"
+                            android:padding="30dp" />
+
+                        <Button
+                            android:id="@+id/btn_medical"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/medical"
+                            android:padding="30dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_airticket"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="機票"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_entertainment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="娛樂"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_telephone_bill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="話費"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_medical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="醫療"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btn_fare"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/car"
+                            android:padding="30dp" />
+
+                        <Button
+                            android:id="@+id/btn_water_electricity_bill"
+                            android:layout_width="60dp"
+                            android:layout_height="60sp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/water"
+                            android:padding="30dp" />
+
+                        <Button
+                            android:id="@+id/btn_gift"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginRight="30dp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/gift"
+                            android:padding="30dp" />
+
+                        <Button
+                            android:id="@+id/btn_book"
+                            android:layout_width="60sp"
+                            android:layout_height="60sp"
+                            android:layout_marginBottom="0dp"
+                            android:background="@drawable/paybook"
+                            android:padding="30dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_fare"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="車費"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_water_electricity_bill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="水電"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_gift"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="40dp"
+                            android:text="禮物"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tv_book"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="書費"
+                            android:textColor="#000000"
+                            android:textSize="25dp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+
+</ScrollView>
